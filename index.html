@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="icon" type="image/png" href="assests/images/icons8-resume-48.png">
+    <link rel="stylesheet" href="assests/css/main.css">
+</head>
+<style>
+
+
+    #carousel img {
+    display: none;
+}
+
+#carousel img.active {
+    display: block;
+}
+.arrow {
+    font-size: 32px; 
+}
+   
+.navbar{
+        background: linear-gradient(to right, #000080, #4169E1, #87CEEB, #89CFF0, #008080);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        padding: 15px 0;
+ 
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.navbar-and-toggler {
+    display: flex;
+    align-items: center; 
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+}
+
+.navbar-brand-icon {
+    margin-right: 5px; 
+}
+
+.navbar-brand-text {
+    font-weight: bold; 
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center; 
+}
+
+.navbar-buttons button {
+    margin-left: 10px; 
+}
+</style>
+<body>
+    <nav class="navbar text-blue-dark">
+        <div class="container">
+            <div class="navbar-content d-flex justify-content-between align-items-center">
+                <div class="navbar-and-toggler">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assests/images/logo-1.png" alt="" class="navbar-brand-icon">
+                        <span class="navbar-brand-text">ResumeBuilder</span>
+                        <span></span>
+                    </a>
+                    <button type="button" class="navbar-toggler-btn" style="background-color: #786beb;">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </button>
+                </div>
+                <div class="navbar-buttons d-flex justify-content-between align-items-center" id="navbarButtons">
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <header class="header bg-bright" id="header">
+        <div class="container">
+            <div class="header-content text-center">
+                <h1 class="lg title glow-effect">Get Ready For Interview With AI,which helps you to get hired at top companies</h1>
+                <p class="text-dark fs-18 glow-effect ">"Make a great first impression and land the interview with our collection of attractive and functional CV templates that can be modified to suit any position"!</p>
+                <a href="#" onclick="redirectToResume()" class="btn btn-primary text-uppercase" style="background-color: #08c9c9;">Create my resume</a>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee-images">
+                    <img src="assests/images/1.png">
+                    <img src="assests/images/2.png">
+                    <img src="assests/images/3.png">
+                    <img src="assests/images/4.png">
+                    <img src="assests/images/5.png">
+                    <img src="assests/images/6.png">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- <header class="header bg-bright" id="header">
+        <div class="container">
+           <div class="header-content text-center"></div>
+           <h6 class="text-uppercase text-blue-dark fs-14 fw-6 ls-1">online resume builder</h6>
+           <h1 class="lg title">Only 2% of resumes make it pass the first round.Be in the top 2%</h1>
+           <p class = "text-dark fs-18">Use professional field-tested resume templates that follow that exact 'resume rules' employers look for. Easy to use and done within minutes - try now for free!</p>
+           <a href="#" onclick="redirectToResume()" class="btn btn-primary text-uppercase">Create my resume</a>
+          <img src = "assests/images/dublin-resume-templates.avif">
+        </div>
+        
+
+    </header> -->
+    <!-- <div class="section-one">
+        <div class="container">
+            <div class = "section-one-content">
+                <div class="section-one-l">
+                    <img src = "assests/images/visual-0c7080adf17f1f207276f613447c924f667dab34b7ac415cd7ef653172defd0b.svg">
+                </div>
+                <div class = "section-one-r text-center">
+                    <h2 class = "lg-title">Use the best resume maker as your guide!</h2>
+                    <p class = "text">Getting that dream job can seem like an impossible task. We're here to change that. Give yourself a real advantage with the best online resume maker: created by experts, imporved by data, trusted by millions of professionals.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="section-one">
+        <div class="container">
+            <div class="section-one-content">
+                <div class="section-one-l">
+                    <div id="carousel">
+                        <img src="assests/images/visual-0c7080adf17f1f207276f613447c924f667dab34b7ac415cd7ef653172defd0b.svg" class="active">
+                        <img src="assests/images/undraw_analysis_dq08.svg">
+                        <img src="assests/images/undraw_experience_design_re_dmqq.svg">
+                    </div>
+                    <button id="prevBtn" class="arrow"><img src="assests/images/icons8-double-left.gif" alt=""></button>
+                    
+                    <button id="nextBtn" class="arrow"><img src="assests/images/icons8-double-right.gif" alt=""></button>
+                   
+                </div>
+                <div class="section-one-r text-center">
+                    <h2 class="lg-title">Use the best resume maker as your guide!</h2>
+                    <p class="text">Getting that dream job can seem like an impossible task. We're here to change that. Give yourself a real advantage with the best online resume maker: created by experts, improved by data, trusted by millions of professionals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-two" style="background-color: #b4f1cb;">
+        <div class="container">
+            <div class="section-one-content">
+                
+                <div class="section-one-r text-center">
+                    <h2 class="lg-title" >Discover new career opportunities effortlessly with our resume builder's seamless integration of job recommendations, ensuring your resume aligns perfectly with your desired roles.</h2>
+                    <p class="text">"Take the guesswork out of resume writing! Our innovative builder not only assists in creating professional resumes but also provides curated project recommendations to bolster your portfolio."</p>
+                </div>
+                <div class="section-one-l">
+                    
+                        <!-- <img src="assests/images/visual-0c7080adf17f1f207276f613447c924f667dab34b7ac415cd7ef653172defd0b.svg" class="active"> -->
+                        <img src="assests/images/3.png" style="height: auto;">
+                        <!-- <img src="assests/images/undraw_experience_design_re_dmqq.svg"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class = "section-two bg-bright" style="background-color: #d7e7f9;">
+        <div class="container">
+            <div class="section-two-content">
+                <div class = "section-items">
+                    <div class = "section-item">
+                        <div class = "section-item-icon">
+                            <img src = "assests/images/feature-1-edf4481d69166ac81917d1e40e6597c8d61aa970ad44367ce78049bf830fbda5.svg" alt = "">
+                        </div>
+                        <h5 class = "section-item-title"> Make a resume that wins interviews!</h5>
+                        <p class = "text">Use our resume maker with its advanced creation tools to tell professional story that engages recruiters, hiring managers and even CEOs.</p>
+                    </div>
+
+                    <div class = "section-item">
+                        <div class = "section-item-icon">
+                            <img src = "assests/images/feature-2-a7a471bd973c02a55d1b3f8aff578cd3c9a4c5ac4fc74423d94ecc04aef3492b.svg" alt = "">
+                        </div>
+                        <h5 class = "section-item-title">Resume writing made easy!</h5>
+                        <p class = "text">Resume writing has never been this effortless. Pre-generated text, visual designs and more - all already integrated into the resume maker. Just fill in your details.</p>
+                    </div>
+
+                    
+
+                    <div class = "section-item">
+                        <div class = "section-item-icon">
+                            <img src = "assests/images/feature-3-4e87a82f83e260488c36f8105e26f439fdc3ee5009372bb5e12d9421f32eabdd.svg" alt = "">
+                        </div>
+                        <h5 class = "section-item-title">A recruiter-tested CV maker tool</h5>
+                        <p class = "text">Our resume builder and its pre-generated content are tested by recruiters and IT experts. We help your CV become truly competitive in the hiring process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class = "footer bg-dark">
+        <div class="container">
+            <div class = "footer-content text-center">
+                <p class="fs-15">Advance your career with the BEST professional resume tool <br>&copy;Copyright 2024. All Rights Reserved - <span>ResumeBuilder.</span></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+
+        var currentImage = 0;
+        var images = document.querySelectorAll('#carousel img');
+        var totalImages = images.length;
+        
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            images[currentImage].classList.remove('active');
+            currentImage = (currentImage + 1) % totalImages;
+            images[currentImage].classList.add('active');
+        });
+        
+        document.getElementById('prevBtn').addEventListener('click', function() {
+            images[currentImage].classList.remove('active');
+            currentImage = (currentImage - 1 + totalImages) % totalImages;
+            images[currentImage].classList.add('active');
+        });
+        
+                document.getElementById('loginBtn').addEventListener('click', function() {
+                    window.location.href = 'index.html';
+                });
+            </script>
+
+    
+    <script>
+      
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+    <script>
+        function logout() {
+    localStorage.removeItem('loggedInUser');
+    window.location.href = 'index.html';
+}
+      
+        // JavaScript
+const navbarButtons = document.getElementById('navbarButtons');
+const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+if (loggedInUser) {
+    
+    const welcomeMessage = document.createElement('span');
+    welcomeMessage.innerText = `Welcome, ${loggedInUser.username}`;
+    navbarButtons.appendChild(welcomeMessage);
+    const logoutButton = document.createElement('button');
+    logoutButton.innerText = 'Logout';
+    logoutButton.id = 'logoutBtn';
+    logoutButton.style.backgroundColor = '#e74c3c';
+    logoutButton.style.color = '#fff';
+    logoutButton.style.padding = '8px 16px';
+    logoutButton.style.border = 'none';
+    logoutButton.style.borderRadius = '4px';
+    logoutButton.style.cursor = 'pointer';
+    logoutButton.addEventListener('click', logout);
+    navbarButtons.appendChild(logoutButton);
+} else {
+    const loginButton = document.createElement('button');
+    loginButton.innerText = 'Login/Signup';
+    loginButton.style.background = 'linear-gradient(to right, #085078 0%, #85D8CE 51%, #085078 100%)';
+loginButton.style.backgroundColor = '#555555'; 
+loginButton.style.fontWeight = '500';
+
+loginButton.addEventListener('mouseover', function() {
+    loginButton.style.backgroundPosition = 'right center';
+    loginButton.style.color = '#fff';
+    loginButton.style.textDecoration = 'none';
+});
+
+loginButton.addEventListener('mouseout', function() {
+    // Reset styles on mouseout if needed
+    loginButton.style.backgroundPosition = 'initial';
+    loginButton.style.color = 'initial';
+    loginButton.style.textDecoration = 'initial';
+});
+
+    // loginButton.style.backgroundColor = '#555555';
+    loginButton.style.color = '#fff';
+    loginButton.style.padding = '8px 16px';
+    loginButton.style.border = 'none';
+    loginButton.style.borderRadius = '4px';
+    loginButton.style.cursor = 'pointer';
+    loginButton.addEventListener('click', () => {
+        window.location.href = 'login.html';
+    });
+    navbarButtons.appendChild(loginButton);
+}
+
+    </script>
+    <script>
+    function redirectToResume() {
+        
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+        if (!loggedInUser) {
+            
+            alert('Please login or signup to create your resume.');
+        } else {
+           
+            window.location.href = 'resume.html';
+        }
+    }
+</script>
+</body>
+</html>
